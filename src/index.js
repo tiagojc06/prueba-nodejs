@@ -18,5 +18,10 @@ app.get("/about", (req, res) => {
   res.send("<h1>About</h1>");
 })
 
+
+//* process es un objeto global en Node.js que proporciona información sobre el proceso actual en ejecución.
+//* process.env es una propiedad del objeto process que contiene las variables de entorno del sistema. Estas variables son pares clave-valor que configuran la ejecución de la aplicación, como credenciales, URLs o puertos.
+//* process.env.PORT es una variable de entorno específica que se utiliza para indicar el puerto en el que el servidor debe escuchar. En servicios de la nube como Heroku o Render, esta variable es asignada automáticamente.
+//* Si process.env.PORT no está definida (por ejemplo, al ejecutar localmente), se usa el puerto 3000 como valor predeterminado.
 app.listen(process.env.PORT || 3000);
 console.log("Server on port", process.env.PORT || 3000);
